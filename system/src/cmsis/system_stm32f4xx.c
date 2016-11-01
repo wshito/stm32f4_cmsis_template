@@ -171,14 +171,16 @@ void SystemInit(void)
     SCB->CPACR |= ((3UL << 10*2)|(3UL << 11*2));  /* set CP10 and CP11 Full Access */
   #endif
   /* Reset the RCC clock configuration to the default reset state ------------*/
-  /* Set HSION bit */
+  /* Set HSION bit.  Internal high-speed clock (HSI) is enabled. */
   RCC->CR |= (uint32_t)0x00000001;
 
-  /* Reset CFGR register */
+  /* Reset CFGR (Clock Configuration) register.  CFGR determins which clock is supplied to each peripherals. */
+  /* HSI oscillator is used as the system clock.  No clock dividing to peripherals. */
   RCC->CFGR = 0x00000000;
 
+  /* Disable HSE, CSS (Clock security system), PLL. */
   /* Reset HSEON, CSSON and PLLON bits */
-  RCC->CR &= (uint32_t)0xFEF6FFFF;
+  RCC->CR &= (uint32_t)0xFEF6FFFF; // value 0 bits are bit16 (HSEON), 19 (CSSON), 24 (PLLON).
 
   /* Reset PLLCFGR register */
   RCC->PLLCFGR = 0x24003010;
