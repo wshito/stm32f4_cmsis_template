@@ -224,6 +224,11 @@ SystemClock_Config(void)
 	RCC->CFGR |= 0x8000U;    // APB2 = AHB / 2
 #endif
 
+	// Call the CSMSIS system clock routine to store the clock frequency
+	// in the SystemCoreClock global RAM location.
+	SystemCoreClockUpdate();
+
+
 }
 
 // ----------------------------------------------------------------------------
