@@ -1,7 +1,9 @@
 /**
   ******************************************************************************
   * @file    stm32f4xx_conf.h
-  * @author  Wataru shito
+  * @author  MCD Application Team, modified by WShito (http://www.wshito.com)
+  * @version based on V1.4.4 of stm32f4xx_hal_conf.h
+  * @date    Original HAL version is written 22-January-2016
   * @brief   Modified HAL configuration template file based on stm32f4xx_hal_conf.h
   *          provided by STMicroelectronics.
   ******************************************************************************

@@ -2,7 +2,7 @@
 // This file is the modified version of the one in the GNU ARM Eclipse distribution.
 //
 // Copyright (c) 2014 Liviu Ionescu.
-// Copyright (c) 2016 Wataru Shito.
+// Copyright (c) 2016 WShito.
 //
 // ----------------------------------------------------------------------------
 
